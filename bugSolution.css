@@ -1,0 +1,20 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 500px; /* Explicit width for the container */
+  height: 300px;
+}
+
+.item {
+  flex: 1;
+  background-color: lightblue;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in element's total width */
+  /* Correct calculation using consistent units */
+  width: calc(100% - 20px); /* Adjust for padding */
+}
+
+/* Solution Explanation:
+- Adding explicit width and height to the container provides a clear basis for the `calc()` function to work against.
+- Using consistent units (px) avoids unexpected conversions and inconsistencies.
+- Using box-sizing: border-box helps ensure that padding is included in the total element width, preventing the need to adjust calculation for padding. */
